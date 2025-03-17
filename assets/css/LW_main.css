@@ -74,231 +74,12 @@ header{
     height: 16px;
     width: auto;
 }
-/*--- Sidebar ---*/
-.sidebarinfoBox{
-    background: rgba(19, 19, 19, 1);
-}
-.sidebarinfoBox .btn-close {
-    filter: invert(100%);
-}
-.SidebarBox {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-.SidebarBox .tab-content{
-    color: #fff;
-}
-.recordBox, .settingBox, .guideBox, .termsBox{
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 190px);
-}
-.UserBox, .tabbetrecordBox, .sidebarfooterBox {
-    flex-shrink: 0;   /* 固定這些區塊的高度 */
-}
-.currentbetsBox, .todaybetsBox, .settingswitchBox {
-    display: flex;
-    flex-grow: 1;   /* 填滿剩餘空間 */
-    flex-direction: column;
-    overflow-y: auto;
-    position: relative;
-    border: 1px solid rgba(131, 131, 131, 1);
-    margin: 5px;
-    margin-top: 0;
-    border-radius: 16px;
-}
-.UserBox{
-    height: 70px;
-    background: rgba(35, 49, 96, 0.9);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    margin: 0 5px;
-}
-.UserBox .userimgBox img{
-    width: 48px;
-    height: 48px;
-}
-.UserBox .userimgBox {
-    margin-right: 10px;
-}
-.UserBox .balanceBox {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
-.UserBox .username {
-    font-size: 32px;
-    line-height: 32px;
-    color: #fff;
-}
-.UserBox .balanceBox img{
-    width: 24px;
-    height: 24px;
-}
-.UserBox .balanceBox .Btn-refreshbalance {
-    line-height: 0;
-}
-.UserBox .balanceBox .Btn-refreshbalance img{
-    width: 18px;
-    height: 18px;
-}
-.UserBox .logoutBox {
-    margin-left: auto;
-}
-.UserBox .logoutBox img{
-    width: 36px;
-    height: 36px;
-}
-.tabbetrecordBox{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-}
-.tabbetrecordBox li{
-    width: 49%;
-    display: flex;
-}
-.tabbetrecordBox .tab-primary {
-    flex: 1;
-    text-align: center;
-    height: 42px;
-    font-weight: 700;
-}
-.recordtab-content{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: auto;
-}
-.recordtab-pane{
-    flex-grow: 1;
-    flex-direction: column;
-    height: 100%;
-}
-.recordtab-pane.active{
-    display: flex;
-}
-.currentTitle, .todayTitle, .settingswitchTitle{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    color: #fff;
-    background: rgba(19, 19, 19, 1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-radius: 16px;
-}
-.currentarena img, .todaytotal img, .gamesetting img{
-    width: 24px;
-    height: 24px;
-}
-.currenttable, .todaytable {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-.currenttable th, .currenttable td,
-.todaytable th, .todaytable td {
-    border-bottom: 1px solid #fff1;
-    text-align: center;
-    padding: 3px;
-    word-wrap: break-word;
-}
-.currenttable .table-title,
-.todaytable .table-title {
-    background: rgba(0, 60, 240, 1);
-    position: sticky;
-    top: 35px;
-    z-index: 10;
-}
-.switch-name{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: #fff;
-    border-bottom: 1px solid #fff1;
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-}
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(85, 85, 85, 1);
-    border-radius: 30px;
-    transition: .3s;
-}
-.slider::before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 3px;
-    background: rgba(131, 131, 131, 1);
-    border-radius: 50%;
-    transition: .3s;
-}
-.switch input:checked + .slider {
-    background: rgba(255, 217, 0, 1);
-}
-.switch input:checked + .slider::before {
-    transform: translateX(23px);
-    background: rgba(255, 127, 0, 1);
-}
-.sidebarfooterBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-.Btn-footeraction {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.Btn-footeraction img{
-    width: 32px;
-    height: 32px;
-}
-.Btn-footeraction.active img {
-    filter: brightness(0.7) sepia(1) hue-rotate(12deg) saturate(10) contrast(1.2);
-    filter: brightness(0.7) invert(0.5) sepia(1) hue-rotate(-50deg) saturate(6) contrast(1.2);
-}
-.Btn-footeraction span{
-    font-size: 16px;
-    color: rgba(216, 216, 216, 1);
-}
-.Btn-footeraction.active span{
-    color: rgba(255, 255, 255, 1);
-}
-
-
-
+/*--- Wheel ---*/
 .mainWheel{
     position: relative;
     display: inline-block;
+    margin: 5px;
+    height: 360px;
 }
 .wheelborder{
     position: absolute;
@@ -314,16 +95,43 @@ header{
     z-index: 1;
     width: 90%;
     height: auto;
-    transition: transform 3s ease-out;
 }
-.btn-rotate{
-    background: #000;
+.btn-sound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.btn-record {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+.btn-dollar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+.btn-sound img, .btn-record img, .btn-dollar img{
+    height: 18px;
+    width: auto;
+}
+.mainWheel .btn{
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 137, 167, 1);
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
-    margin-top: 400px;
-    padding: 10px 20px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.btn-rotate:hover, .btn-rotate:active{
-    background: green;
+.mainWheel .btn span{
+    text-shadow: 0 0 5px #000;
+    margin-left: 5px;
 }
 
 
