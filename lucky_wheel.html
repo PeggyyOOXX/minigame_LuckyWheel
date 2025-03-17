@@ -43,22 +43,21 @@
             <div class="mainWheel">
                 <img src="./assets/img/wheelborder.png" class="wheelborder">
                 <img src="./assets/img/wheel.png" class="wheel">
-            </div>
-            <div>
-                <button class="btn btn-rotate">按按按</button>
+                <button class="btn btn-sound">
+                    <img src="./assets/img/icon/sound.png">
+                </button>
+                <button class="btn btn-record">
+                    <img src="./assets/img/icon/record.png">
+                    <span>60</span>
+                </button>
+                <button class="btn btn-dollar">
+                    <img src="./assets/img/icon/dollar.png">
+                    <span>60</span>
+                </button>
             </div>
 
         </div>
 
     </body>
-    <script>
-        const wheel = document.querySelector('.wheel');
-        const btnRotate = document.querySelector('.btn-rotate');
-
-        btnRotate.addEventListener('click', () => {
-            const randomDegrees = Math.floor(Math.random() * 3600) + 1800; // 隨機 5-15 圈
-            wheel.style.transform = `translate(-50%, 5%) rotate(${randomDegrees}deg)`;
-        });
-    </script>
     
 </html>
