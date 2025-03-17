@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+        <meta name="format-detection" content="telephone=no">
+        <title>Lucky Wheel</title>
+
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/LW_main.css">
+
+        <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="./assets/js/animate.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- header -->
+            <header>
+                <div class="header-left">
+                    <div class="showSidebarBox">
+                        <button class="btn Btn-showsidebar">
+                            <img src="./assets/img/icon/showsidebar.png">
+                        </button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="idnumBox">
+                        <span>ID:<span class="">12345678</span></span>
+                    </div>
+                    <div class="balanceBox">
+                        <img src="./assets/img/icon/dollar.png">
+                        <span class="balance">999,999</span>
+                    </div>
+                    <div class="refreshbalanceBox">
+                        <button class="btn Btn-refreshbalance">
+                            <img src="./assets/img/icon/refresh.png">
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="mainWheel">
+                <img src="./assets/img/wheelborder.png" class="wheelborder">
+                <img src="./assets/img/wheel.png" class="wheel">
+            </div>
+            <div>
+                <button class="btn btn-rotate">按按按</button>
+            </div>
+
+        </div>
+
+    </body>
+    <script>
+        const wheel = document.querySelector('.wheel');
+        const btnRotate = document.querySelector('.btn-rotate');
+
+        btnRotate.addEventListener('click', () => {
+            const randomDegrees = Math.floor(Math.random() * 3600) + 1800; // 隨機 5-15 圈
+            wheel.style.transform = `translate(-50%, 5%) rotate(${randomDegrees}deg)`;
+        });
+    </script>
+    
+</html>
