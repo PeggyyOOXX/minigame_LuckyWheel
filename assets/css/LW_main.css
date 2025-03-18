@@ -24,7 +24,7 @@ img {width: 100%;}
     background: url(../img/BG.jpg) center no-repeat;
     background-size: auto 100%;
 }
-/*--- header ---*/
+/*----- header -----*/
 header{
     display: flex;
     justify-content: space-between;
@@ -74,18 +74,27 @@ header{
     height: 16px;
     width: auto;
 }
-/*--- Wheel ---*/
+/*----- Wheel -----*/
 .mainWheel{
     position: relative;
+    width: 100%;
     display: inline-block;
-    margin: 5px;
-    height: 360px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.WheelimgBox{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
 }
 .wheelborder{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+    width: 100%;
+    height: 100%;
 }
 .wheel{
     position: absolute;
@@ -98,20 +107,20 @@ header{
 }
 .btn-sound {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 5px;
     z-index: 3;
 }
 .btn-record {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 5px;
     z-index: 3;
 }
 .btn-dollar {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 5px;
     z-index: 3;
 }
 .btn-sound img, .btn-record img, .btn-dollar img{
@@ -133,6 +142,155 @@ header{
     text-shadow: 0 0 5px #000;
     margin-left: 5px;
 }
+/*----- Bet Area -----*/
+.betAreaBox{
+    border: 1px solid rgba(128, 137, 167, 1);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 16px;
+}
+/*--- Bet Amount ---*/
+.totalbetamount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 5px;
+    background: rgba(68, 73, 108, 1);
+}
+.btn-minus, .btn-plus{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-minus img, .btn-plus img{
+    width: 14px;
+    height: auto;
+}
+/*--- Auto Switch Box ---*/
+.autoswitchBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.autoswitch-ashout, .autoswitch-bet{
+    text-shadow: 0 0 5px #000;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(232, 232, 232, 1);
+    border-radius: 30px;
+    transition: .3s;
+    border: 1px solid #9c9c9c;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 0px;
+    background: linear-gradient(135deg, #D9D9D9 26%, #B6B6B6 61.5%, #737373 100%);
+    border-radius: 50%;
+    transition: .3s;
+}
+.switch input:checked + .slider {
+    background: linear-gradient(90deg, #8CC318 31%, #159138 100%);
+    border: 1px solid rgba(56, 255, 175, 1);
+}
+.switch input:checked + .slider::before {
+    transform: translateX(19px);
+    background: linear-gradient(135deg, #D9D9D9 26%, #B6B6B6 61.5%, #737373 100%);
+}
+/*--- Btn Amount ---*/
+.btnamountBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+.btn-amount{
+    font-size: 13px;
+    color: #fff;
+    background: rgba(40, 47, 72, 1);
+    border: 1px solid rgba(68, 73, 108, 1);
+    padding: 8px!important;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+.btn-amount:hover, .btn-amount:active{
+    border: 1px solid rgba(40, 47, 72, 1);
+    background-color: rgba(68, 73, 108, 1);
+}
+.btn-amount:not(.btn-check)+.btn:active {
+    border: 1px solid rgba(40, 47, 72, 1);
+    background-color: rgba(68, 73, 108, 1);
+}
+/*--- Btn Multiplier ---*/
+.btnmultiplierBox{
+    padding: 10px 0;
+}
+.btnmultiplierGroup{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.btn-multiplier{
+    font-size: 24px;
+    color: #fff;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    text-shadow: 0 0 5px #000;
+}
+.btn-multiplier:nth-child(1){
+    background: radial-gradient(50% 50% at 50% 50%, #393FDC 0%, #000463 100%);
+}
+.btn-multiplier:nth-child(2){
+    background: radial-gradient(50% 50% at 50% 50%, #FE6C7B 0%, #DA2643 100%);
+}
+.btn-multiplier:nth-child(3){
+    background: radial-gradient(50% 50% at 50% 50%, #E35022 0%, #731B00 100%);
+}
+.btn-multiplier:nth-child(4){
+    background: radial-gradient(50% 50% at 50% 50%, #FFB92E 0%, #F69A27 100%);
+}
+/*--- Btn Bet ---*/
+.btnbetBox{
+    padding: 10px 0;
+}
+.btn-bet{
+    background: linear-gradient(90deg, #FFEE2E 0%, #998F1C 100%);
+    border: 1px solid #ffee2e;
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
 
 
 
@@ -231,9 +389,6 @@ header{
 /*--- Button ---*/
 button{
     font-size: unset;
-}
-.btn{
-    border: none;
 }
 @media (max-width: 767px){
     .btn{
