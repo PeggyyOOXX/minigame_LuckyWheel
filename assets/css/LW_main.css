@@ -82,7 +82,7 @@ header{
     padding: 5px;
     margin-bottom: 10px;
 }
-.WheelimgBox{
+.wheelimgBox{
     position: relative;
     display: block;
     width: 100%;
@@ -142,8 +142,8 @@ header{
     text-shadow: 0 0 5px #000;
     margin-left: 5px;
 }
-/*----- Bet Area -----*/
-.betAreaBox{
+/*--- BetArea/BetRecord Box ---*/
+.betareaBox, .betrecordBox{
     border: 1px solid rgba(128, 137, 167, 1);
     margin: 5px;
     padding: 10px;
@@ -262,19 +262,23 @@ header{
     width: 52px;
     height: 52px;
     text-align: center;
-    text-shadow: 0 0 5px #000;
+    font-weight: 700;
 }
 .btn-multiplier:nth-child(1){
-    background: radial-gradient(50% 50% at 50% 50%, #393FDC 0%, #000463 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #888DFF 0%, #393FDC 100%);
+    color: rgba(13, 26, 127, 1);
 }
 .btn-multiplier:nth-child(2){
     background: radial-gradient(50% 50% at 50% 50%, #FE6C7B 0%, #DA2643 100%);
+    color: rgba(150, 2, 17, 1);
 }
 .btn-multiplier:nth-child(3){
-    background: radial-gradient(50% 50% at 50% 50%, #E35022 0%, #731B00 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #FF9152 0%, #E35022 100%);
+    color: rgba(149, 33, 0, 1);
 }
 .btn-multiplier:nth-child(4){
     background: radial-gradient(50% 50% at 50% 50%, #FFB92E 0%, #F69A27 100%);
+    color: rgba(183, 93, 1, 1);
 }
 /*--- Btn Bet ---*/
 .btnbetBox{
@@ -288,6 +292,52 @@ header{
     height: 40px;
     font-weight: 800;
     font-size: 24px;
+}
+/*--- Record ---*/
+.betrecordBox .nav-pills{
+    display: flex;
+    width: 100%;
+}
+.betrecordBox .nav-pills .nav-item {
+    flex: 1;
+    text-align: center;
+}
+.betrecordBox .nav-pills .nav-item:nth-child(1){
+    padding-right: 5px;
+}
+.betrecordBox .nav-pills .nav-item:nth-child(2){
+    padding: 0 5px;
+}
+.betrecordBox .nav-pills .nav-item:nth-child(3){
+    padding-left: 5px;
+}
+.betrecordBox .nav-pills .nav-link {
+    width: 100%;
+    text-align: center;
+    background: rgba(40, 47, 72, 1);
+    border: 1px solid rgba(68, 73, 108, 1);
+    font-size: 13px;
+    border-radius: 16px;
+    padding: 4px 0;
+    color: #fff;
+}
+.betrecordBox .nav-pills .nav-link.active{
+    background: linear-gradient(90deg, #194C9F 31%, #1D3A8F 100%);
+}
+.recordtable{
+    width: 100%;
+    text-align: center;
+}
+.recordtable th{
+    padding: 12px 0;
+}
+.recordtable td{
+    padding: 10px 0;
+    background: rgba(68, 73, 108, 1);
+}
+.recordtable tr{
+    border-radius: 8px;
+    margin: 5px 0;
 }
 
 
