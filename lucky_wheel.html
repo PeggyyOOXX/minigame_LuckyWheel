@@ -15,203 +15,269 @@
 
     <body>
         <div class="wrapper">
-            <!-- header -->
-            <header>
-                <div class="header-left">
-                    <div class="showSidebarBox">
-                        <button class="btn Btn-showsidebar">
-                            <img src="./assets/img/icon/showsidebar.png">
-                        </button>
-                    </div>
+            <div class="composition">
+                <!-- header -->
+                <div class="headerBox">
+                    <img src="./assets/img/LW_logo.png" class="LWlogo MOBhide">
+                    <header class="header">
+                        <div class="header-left">
+                            <div class="showSidebarBox">
+                                <button class="btn Btn-showsidebar">
+                                    <img src="./assets/img/icon/showsidebar.png">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="idnumBox">
+                                <span>ID:<span class="">12345678</span></span>
+                            </div>
+                            <div class="balanceBox">
+                                <img src="./assets/img/icon/dollar.png">
+                                <span class="balance">999,999</span>
+                            </div>
+                            <div class="refreshbalanceBox">
+                                <button class="btn Btn-refreshbalance">
+                                    <img src="./assets/img/icon/refresh.png">
+                                </button>
+                            </div>
+                        </div>
+                    </header>
                 </div>
-                <div class="header-right">
-                    <div class="idnumBox">
-                        <span>ID:<span class="">12345678</span></span>
+
+                <!-- Main Wheel -->
+                <div class="mainWheel">
+                    <div class="wheelimgBox">
+                        <img src="./assets/img/wheel.png" class="wheel">
+                        <img src="./assets/img/wheelborder.png" class="wheelborder">
                     </div>
-                    <div class="balanceBox">
+                    <button class="btn btn-sound">
+                        <img src="./assets/img/icon/sound.png">
+                    </button>
+                    <button class="btn btn-record">
+                        <img src="./assets/img/icon/record.png">
+                        <span>60</span>
+                    </button>
+                    <button class="btn btn-dollar">
                         <img src="./assets/img/icon/dollar.png">
-                        <span class="balance">999,999</span>
-                    </div>
-                    <div class="refreshbalanceBox">
-                        <button class="btn Btn-refreshbalance">
-                            <img src="./assets/img/icon/refresh.png">
+                        <span>60</span>
+                    </button>
+                </div>
+
+                <!-- Bet Area -->
+                <div class="betareaBox">
+                    <div class="totalbetamount">
+                        <button class="btn btn-minus">
+                            <img src="./assets/img/icon/minus.png">
+                        </button>
+                        <div>
+                            <span>100</span>
+                        </div>
+                        <button class="btn btn-plus">
+                            <img src="./assets/img/icon/plus.png">
                         </button>
                     </div>
+                    <div class="autoswitchBox">
+                        <div class="autoswitch-ashout">
+                            <span>Auto Cashout</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="autoswitch-bet">
+                            <span>Auto Bet</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btnamountBox">
+                        <button class="btn btn-amount">+100</button>
+                        <button class="btn btn-amount">+500</button> 
+                        <button class="btn btn-amount">+1000</button>
+                        <button class="btn btn-amount">+5000</button>
+                        <button class="btn btn-amount">1/2</button>
+                    </div>
+                    <div class="btnmultiplierBox">
+                        <span>multiplier amount</span>
+                        <div class="btnmultiplierGroup">
+                            <button class="btn btn-multiplier">2x</button>
+                            <button class="btn btn-multiplier">6x</button>
+                            <button class="btn btn-multiplier">3x</button>
+                            <button class="btn btn-multiplier">16x</button>
+                        </div>
+                    </div>
+                    <div class="btnbetBox">
+                        <button class="btn btn-bet">BET</button>
+                    </div>
                 </div>
-            </header>
 
-            <!-- Main Wheel -->
-            <div class="mainWheel">
-                <div class="wheelimgBox">
-                    <img src="./assets/img/wheelborder.png" class="wheelborder">
-                    <img src="./assets/img/wheel.png" class="wheel">
-                </div>
-                <button class="btn btn-sound">
-                    <img src="./assets/img/icon/sound.png">
-                </button>
-                <button class="btn btn-record">
-                    <img src="./assets/img/icon/record.png">
-                    <span>60</span>
-                </button>
-                <button class="btn btn-dollar">
-                    <img src="./assets/img/icon/dollar.png">
-                    <span>60</span>
-                </button>
-            </div>
+                <!-- Bet Record -->
+                <div class="betrecordBox">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-Plays" type="button">Plays</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-History" type="button">History</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-Top" type="button">Top</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="pills-Plays">
+                            <table class="recordtable">
+                                <tbody>
+                                    <tr>
+                                        <th>Players</th>
+                                        <th>Bet FUN</th>
+                                        <th>x</th>
+                                        <th>Win FUN</th>
+                                    </tr>
+                                    <tr>
+                                        <td>66***01</td>
+                                        <td>0</td>
+                                        <td>1.56x</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>66***02</td>
+                                        <td>0</td>
+                                        <td>2.41x</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>66***03</td>
+                                        <td>0</td>
+                                        <td>3.79x</td>
+                                        <td>0</td>
+                                    </tr>
 
-            <!-- Bet Area -->
-            <div class="betareaBox">
-                <div class="totalbetamount">
-                    <button class="btn btn-minus">
-                        <img src="./assets/img/icon/minus.png">
-                    </button>
-                    <div>
-                        <span>100</span>
-                    </div>
-                    <button class="btn btn-plus">
-                        <img src="./assets/img/icon/plus.png">
-                    </button>
-                </div>
-                <div class="autoswitchBox">
-                    <div class="autoswitch-ashout">
-                        <span>Auto Cashout</span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    <div class="autoswitch-bet">
-                        <span>Auto Bet</span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="btnamountBox">
-                    <button class="btn btn-amount">+100</button>
-                    <button class="btn btn-amount">+500</button> 
-                    <button class="btn btn-amount">+1000</button>
-                    <button class="btn btn-amount">+5000</button>
-                    <button class="btn btn-amount">1/2</button>
-                </div>
-                <div class="btnmultiplierBox">
-                    <span>multiplier amount</span>
-                    <div class="btnmultiplierGroup">
-                        <button class="btn btn-multiplier">2x</button>
-                        <button class="btn btn-multiplier">6x</button>
-                        <button class="btn btn-multiplier">3x</button>
-                        <button class="btn btn-multiplier">16x</button>
-                    </div>
-                </div>
-                <div class="btnbetBox">
-                    <button class="btn btn-bet">BET</button>
-                </div>
-            </div>
-
-            <!-- Bet Record -->
-            <div class="betrecordBox">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-Plays" type="button">Plays</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-History" type="button">History</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-Top" type="button">Top</button>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="pills-Plays">
-                        <table class="recordtable">
-                            <tbody>
-                                <tr>
-                                    <th>Players</th>
-                                    <th>Bet FUN</th>
-                                    <th>x</th>
-                                    <th>Win FUN</th>
-                                </tr>
-                                <tr>
-                                    <td>66***01</td>
-                                    <td>0</td>
-                                    <td>1.56x</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>66***02</td>
-                                    <td>0</td>
-                                    <td>2.41x</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>66***03</td>
-                                    <td>0</td>
-                                    <td>3.79x</td>
-                                    <td>0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="pills-History">
-                        <table class="recordtable">
-                            <tbody>
-                                <tr>
-                                    <th>Players</th>
-                                    <th>Bet FUN</th>
-                                    <th>x</th>
-                                    <th>Win FUN</th>
-                                </tr>
-                                <tr>
-                                    <td>99***03</td>
-                                    <td>3,333.33</td>
-                                    <td>3.79x</td>
-                                    <td>12,633.32</td>
-                                </tr>
-                                <tr>
-                                    <td>99***02</td>
-                                    <td>2,222.22</td>
-                                    <td>2.41x</td>
-                                    <td>5,355.55</td>
-                                </tr>
-                                <tr>
-                                    <td>99***01</td>
-                                    <td>11,111.11</td>
-                                    <td>1.56x</td>
-                                    <td>17,333.33</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="pills-Top">
-                        <table class="recordtable">
-                            <tbody>
-                                <tr>
-                                    <th>Players</th>
-                                    <th>Bet FUN</th>
-                                    <th>x</th>
-                                    <th>Win FUN</th>
-                                </tr>
-                                <tr>
-                                    <td>88***01</td>
-                                    <td>11,111.11</td>
-                                    <td>1.56x</td>
-                                    <td>17,333.33</td>
-                                </tr>
-                                <tr>
-                                    <td>88***02</td>
-                                    <td>2,222.22</td>
-                                    <td>2.41x</td>
-                                    <td>5,355.55</td>
-                                </tr>
-                                <tr>
-                                    <td>88***03</td>
-                                    <td>3,333.33</td>
-                                    <td>3.79x</td>
-                                    <td>12,633.32</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <tr>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o</td>
+                                        <td>o</td>
+                                        <td>x</td>
+                                        <td>x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o</td>
+                                        <td>o</td>
+                                        <td>x</td>
+                                        <td>x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o</td>
+                                        <td>o</td>
+                                        <td>x</td>
+                                        <td>x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o</td>
+                                        <td>o</td>
+                                        <td>x</td>
+                                        <td>x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o</td>
+                                        <td>o</td>
+                                        <td>x</td>
+                                        <td>x</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="pills-History">
+                            <table class="recordtable">
+                                <tbody>
+                                    <tr>
+                                        <th>Players</th>
+                                        <th>Bet FUN</th>
+                                        <th>x</th>
+                                        <th>Win FUN</th>
+                                    </tr>
+                                    <tr>
+                                        <td>99***03</td>
+                                        <td>3,333.33</td>
+                                        <td>3.79x</td>
+                                        <td>12,633.32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>99***02</td>
+                                        <td>2,222.22</td>
+                                        <td>2.41x</td>
+                                        <td>5,355.55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>99***01</td>
+                                        <td>11,111.11</td>
+                                        <td>1.56x</td>
+                                        <td>17,333.33</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="pills-Top">
+                            <table class="recordtable">
+                                <tbody>
+                                    <tr>
+                                        <th>Players</th>
+                                        <th>Bet FUN</th>
+                                        <th>x</th>
+                                        <th>Win FUN</th>
+                                    </tr>
+                                    <tr>
+                                        <td>88***01</td>
+                                        <td>11,111.11</td>
+                                        <td>1.56x</td>
+                                        <td>17,333.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>88***02</td>
+                                        <td>2,222.22</td>
+                                        <td>2.41x</td>
+                                        <td>5,355.55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>88***03</td>
+                                        <td>3,333.33</td>
+                                        <td>3.79x</td>
+                                        <td>12,633.32</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
